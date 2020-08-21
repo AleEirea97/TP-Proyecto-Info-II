@@ -6,9 +6,9 @@ El tema elegido para el proyecto es el Protocolo de Comunicación SPI.
 
 ## **PROTOCOLO DE COMUNICACIÓN SPI:**
 
-<div style="text-align: justify">El Bus SPI (Serial Peripheral Interface) es un estándar de comunicaciones, usado mayormente para la transferencia de información entre circuitos integrados en equipos electrónicos, en distancias cortas y a alta velocidad, que aceptan un flujo de bits serie regulado por un clock. </div>
+<div style="text-align: justify">El Bus SPI (Serial Peripheral Interface) es un estándar de comunicaciones, usado mayormente para la transferencia de información entre circuitos integrados en equipos electrónicos, en distancias cortas y a alta velocidad, que aceptan un flujo de bits serie regulado por un clock.</div>
 
-<div style="text-align: justify">Bajo el uso de este protocolo, el equipo que maneja el clock es conocido como **Master** y cualquier equipo que sea habilitado por él para establecer una comunicación será nombrado como **Slave**.</div>
+<div style="text-align: justify">Bajo el uso de este protocolo, el equipo que maneja el clock es conocido como <strong>Master</strong> y cualquier equipo que sea habilitado por él para establecer una comunicación será nombrado como <strong>Slave</strong>.</div>
 
 ### **Operación:**
 
@@ -23,11 +23,9 @@ El SPI es un protocolo sincrónico. La sincronización y la transmisión de dato
 * **SS/Select**: Para seleccionar un Esclavo, o para que el Master le diga al Esclavo que se active. También llamada SSTE o CS (Chip Select) en el e	quipo Slave.
 
 ![SPI con un Slave](https://github.com/AleEirea97/TP-Proyecto-Info-II/blob/master/img/SPI_1slave.png)
-
 *Figura I: Conexión SPI para un Slave.*
 
 ![SPI con múltiples Slaves](https://github.com/AleEirea97/TP-Proyecto-Info-II/blob/master/img/SPI_3slave.png)
-
 *Figura II: Conexión SPI para múltiples Slaves.*
 
 <div style="text-align: justify">La Cadena de bits es enviada de manera sincrónica con los pulsos del clock, es decir con cada pulso, el Master envía un bit. Para que empiece la transmisión el Master baja la señal SSTE o SS/Select a nivel bajo, con esto el Slave se activa y empieza la transmisión, con un pulso de clock al mismo tiempo que el primer bit es leído.</div>
