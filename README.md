@@ -14,13 +14,13 @@ Bajo el uso de este protocolo, el equipo que maneja el clock es conocido como **
 
 El SPI es un protocolo sincrónico. La sincronización y la transmisión de datos se realizan por medio de 4 señales:
 
-* SCLK (Clock): Es el pulso que marca la sincronización. Con cada pulso de este reloj, se lee o se envía un bit. También llamado TAKT (en alemán).
+* **SCLK** (**Clock**): Es el pulso que marca la sincronización. Con cada pulso de este reloj, se lee o se envía un bit. También llamado TAKT (en alemán).
 
-* MOSI (Master Output Slave Input): Salida de datos del Master y entrada de datos al Esclavo. También llamada SIMO o SDI (Slave Data In) en el equipo Slave.
+* **MOSI** (**Master Output Slave Input**): Salida de datos del Master y entrada de datos al Esclavo. También llamada SIMO o SDI (Slave Data In) en el equipo Slave.
 
-* MISO (Master Input Slave Output): Salida de datos del Esclavo y entrada al Master. También conocida por SOMI o SDO (Slave Data Out) en el equipo Slave.
+* **MISO** (**Master Input Slave Output**): Salida de datos del Esclavo y entrada al Master. También conocida por SOMI o SDO (Slave Data Out) en el equipo Slave.
 
-* SS/Select: Para seleccionar un Esclavo, o para que el Master le diga al Esclavo que se active. También llamada SSTE o CS (Chip Select) en el e	quipo Slave.
+* **SS/Select**: Para seleccionar un Esclavo, o para que el Master le diga al Esclavo que se active. También llamada SSTE o CS (Chip Select) en el e	quipo Slave.
 
 ![SPI con un Slave](https://github.com/AleEirea97/TP-Proyecto-Info-II/blob/master/img/SPI_1slave.png)
 
