@@ -8,6 +8,7 @@ El tema elegido para el proyecto es el Protocolo de Comunicación SPI.
 
 <div style="text-align: justify">El Bus SPI (Serial Peripheral Interface) es un estándar de comunicaciones, usado mayormente para la transferencia de información entre circuitos integrados en equipos electrónicos, en distancias cortas y a alta velocidad, que aceptan un flujo de bits serie regulado por un clock.</div>
 
+
 <div style="text-align: justify">Bajo el uso de este protocolo, el equipo que maneja el clock es conocido como <strong>Master</strong> y cualquier equipo que sea habilitado por él para establecer una comunicación será nombrado como <strong>Slave</strong>.</div>
 
 ### **Operación:**
