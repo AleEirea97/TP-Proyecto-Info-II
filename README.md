@@ -22,11 +22,11 @@ El SPI es un protocolo sincrónico. La sincronización y la transmisión de dato
 
 * SS/Select: Para seleccionar un Esclavo, o para que el Master le diga al Esclavo que se active. También llamada SSTE o CS (Chip Select) en el e	quipo Slave.
 
-![SPI con un Slave](https://github.com/AleEirea97/TP-Proyecto-Info-II/blob/master/img/spi_1slave.png)
+![SPI con un Slave](https://github.com/AleEirea97/TP-Proyecto-Info-II/blob/master/img/SPI_1slave.png)
 
 *Figura I: Conexión SPI para un Slave.*
 
-![SPI con múltiples Slaves](https://github.com/AleEirea97/TP-Proyecto-Info-II/tree/master/img/spi_3slave.png)
+![SPI con múltiples Slaves](https://github.com/AleEirea97/TP-Proyecto-Info-II/tree/master/img/SPI_3slave.png)
 
 *Figura II: Conexión SPI para múltiples Slaves.*
 
