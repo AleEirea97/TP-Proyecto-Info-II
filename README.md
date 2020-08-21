@@ -1,7 +1,7 @@
 # TP-Proyecto-Info-II
 Repositorio para el Proyecto de Informática II 2020
 
-# Descripción
+### Descripción:
 El tema elegido para el proyecto es el Protocolo de Comunicación SPI.
 
 ## **PROTOCOLO DE COMUNICACIÓN SPI:**
@@ -22,11 +22,11 @@ El SPI es un protocolo sincrónico. La sincronización y la transmisión de dato
 
 * SS/Select: Para seleccionar un Esclavo, o para que el Master le diga al Esclavo que se active. También llamada SSTE o CS (Chip Select) en el e	quipo Slave.
 
-![SPI con un Slave](C:/Users/Outlet/Documents/GitHub/TP-Proyecto-Info-II/SPI_1slave.jpg)
+![SPI con un Slave](https://github.com/AleEirea97/TP-Proyecto-Info-II/tree/master/img/SPI_1slave.gif)
 
 *Figura I: Conexión SPI para un Slave.*
 
-![SPI con múltiples Slaves](C:/Users/Outlet/Documents/GitHub/TP-Proyecto-Info-II/SPI_3slave.jpg)
+![SPI con múltiples Slaves](https://github.com/AleEirea97/TP-Proyecto-Info-II/tree/master/img/SPI_3slave.gif)
 
 *Figura II: Conexión SPI para múltiples Slaves.*
 
@@ -53,5 +53,5 @@ El clock se inicializa en **nivel bajo** y la trasmisión se realiza cuando pasa
 
   La siguiente imagen muestra un ejemplo de una comunicación usando el **Modo 0**:
 
-  ![Ejemplo de Comunicación](C:/Users/Outlet/Documents/GitHub/TP-Proyecto-Info-II/ej_comm.jpg)
+  ![Ejemplo de Comunicación](https://github.com/AleEirea97/TP-Proyecto-Info-II/tree/master/img/ej_comm.jpg)
   
