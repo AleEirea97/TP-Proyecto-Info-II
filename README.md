@@ -68,9 +68,9 @@ La máquna será simulada con 2 modos disponibles: **Modo 0** y **Modo 2**. Los 
 
 * **SDI:**		Estado del equipo *Slave*. Se encarga de recibir la trasmisión del **MOSI** del *Master* de forma sincrónica con la señal de clock.
 
-* **SDO:**		Estado del equipo *Slave*. Se encarga de trasmitir al equipo *Master* bit a bit de forma sincrónica con la señal de clock.Se trasmitirá 1 byte, o sea 8 veces.
+* **SDO:**		Estado del equipo *Slave*. Se encarga de trasmitir al equipo *Master* bit a bit de forma sincrónica con la señal de clock. Se trasmitirá 1 byte, o sea 8 veces.
 
-* **MOSI:**		Estado del equipo *Master*. Se encarga de recibir la trasmisión del **SDO** del *Slave* de forma sincrónica con la señal de clock.
+* **MISO:**		Estado del equipo *Master*. Se encarga de recibir la trasmisión del **SDO** del *Slave* de forma sincrónica con la señal de clock.
 
 #### Flags (Banderas) a  utilizar:
 
