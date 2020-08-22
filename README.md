@@ -17,11 +17,11 @@ El SPI es un protocolo sincrónico. La sincronización y la transmisión de dato
 
 * **SCLK** (**Clock**): Es el pulso que marca la sincronización. Con cada pulso de este reloj, se lee o se envía un bit. También llamado TAKT (en alemán).
 
-* **MOSI** (**Master Output Slave Input**): Salida de datos del Master y entrada de datos al Esclavo. También llamada SIMO o SDI (Slave Data In) en el equipo Slave.
+* **MOSI** (**Master Output Slave Input**): Salida de datos del Master y entrada de datos al Slave. También llamada SIMO o SDI (Slave Data In) en el equipo Slave.
 
-* **MISO** (**Master Input Slave Output**): Salida de datos del Esclavo y entrada al Master. También conocida por SOMI o SDO (Slave Data Out) en el equipo Slave.
+* **MISO** (**Master Input Slave Output**): Salida de datos del Slave y entrada al Master. También conocida por SOMI o SDO (Slave Data Out) en el equipo Slave.
 
-* **SS/Select**: Para seleccionar un Esclavo, o para que el Master le diga al Esclavo que se active. También llamada SSTE o CS (Chip Select) en el e	quipo Slave.
+* **SS/Select**: Para seleccionar un Slave, o para que el Master le diga al Slave que se active. También llamada SSTE o CS (Chip Select) en el equipo Slave.
 
 ![SPI con un Slave](https://github.com/AleEirea97/TP-Proyecto-Info-II/blob/master/img/SPI_1slave.png)
 *Figura I: Conexión SPI para un Slave.*
@@ -53,3 +53,21 @@ El clock se inicializa en **nivel bajo** y la trasmisión se realiza cuando pasa
   La siguiente imagen muestra un ejemplo de una comunicación usando el **Modo 0**:
 
   ![Ejemplo de Comunicación](https://github.com/AleEirea97/TP-Proyecto-Info-II/blob/master/img/ej_comm.png)
+
+### **Diagrama de Estados:**
+
+Se plantea un diagrama de estados del sistema tratado.
+
+  ![Ejemplo de Comunicación](https://github.com/AleEirea97/TP-Proyecto-Info-II/blob/master/img/diagrama_std.png)
+
+La máquna será simulada con 2 modos disponibles: **Modo 0** y **Modo 2**.Los estados son:
+
+* **init_t:**		Estado inicial de la máquina. Configura al Master con el *modo* a utilizar para la trasmisión y la cantidad y habilitación de los *Slaves* utilizados.
+
+* **MOSI:**		Estado del equipo *Master*. Se encarga de trasmitir al equipo *Slave* bit a bit de forma sincrónica con la señal de clock.
+
+* **SDI:**		Estado del equipo *Slave*. Se encarga de recibir la trasmisión del **MOSI** del *Master* de forma sincrónica con la señal de clock.
+
+* **SDO:**		Estado del equipo *Slave*. Se encarga de trasmitir al equipo *Master* bit a bit de forma sinrócnica con la señal de clock.
+
+* **MOSI:**		Estado del equipo *Master*. Se encarga de recibir la trasmisión del **SDO** del *Slave* de forma sincrónica con la señal de clock.
