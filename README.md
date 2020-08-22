@@ -60,14 +60,24 @@ Se plantea un diagrama de estados del sistema tratado.
 
   ![Ejemplo de Comunicación](https://github.com/AleEirea97/TP-Proyecto-Info-II/blob/master/img/diagrama_std.png)
 
-La máquna será simulada con 2 modos disponibles: **Modo 0** y **Modo 2**.Los estados son:
+La máquna será simulada con 2 modos disponibles: **Modo 0** y **Modo 2**. Los estados son:
 
-* **init_t:**		Estado inicial de la máquina. Configura al Master con el *modo* a utilizar para la trasmisión y la cantidad y habilitación de los *Slaves* utilizados.
+* **init_t:**		Estado inicial de la máquina. Configura al *Master* con el *modo* a utilizar para la trasmisión y la cantidad y habilitación de los *Slaves* utilizados.
 
-* **MOSI:**		Estado del equipo *Master*. Se encarga de trasmitir al equipo *Slave* bit a bit de forma sincrónica con la señal de clock.
+* **MOSI:**		Estado del equipo *Master*. Se encarga de trasmitir al equipo *Slave* bit a bit de forma sincrónica con la señal de clock. Se trasmitirá 1 byte, o sea 8 veces.
 
 * **SDI:**		Estado del equipo *Slave*. Se encarga de recibir la trasmisión del **MOSI** del *Master* de forma sincrónica con la señal de clock.
 
-* **SDO:**		Estado del equipo *Slave*. Se encarga de trasmitir al equipo *Master* bit a bit de forma sinrócnica con la señal de clock.
+* **SDO:**		Estado del equipo *Slave*. Se encarga de trasmitir al equipo *Master* bit a bit de forma sincrónica con la señal de clock.Se trasmitirá 1 byte, o sea 8 veces.
 
 * **MOSI:**		Estado del equipo *Master*. Se encarga de recibir la trasmisión del **SDO** del *Slave* de forma sincrónica con la señal de clock.
+
+#### Flags (Banderas) a  utilizar:
+
+* **config_t**:		Configuración del equipo *Master*.
+
+* **MHab_t**:		Habilitación pare trasmitir al equipo *Slave* configurado.
+
+* **SHab_t**:		Indicación desde el *Slave* utilizado al *Master* que va a responder.
+
+* **clock_fby**:		Indicación de fin de ciclo de clock **(El byte se ha trasmitido completamente)** para pasar de estados de trasmisión a estados de recepción.  
