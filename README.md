@@ -83,7 +83,7 @@ La máquina será simulada con 2 modos disponibles: **Modo 0** y **Modo 2**. Los
 * **clock_fby**:		Indicación de fin de ciclo de clock **(El byte se ha trasmitido completamente)** para pasar de estados de trasmisión a estados de recepción.  
 
 ### Código: main.c:
-```
+```c
 #include "bspi.h"
 
 int main(){
