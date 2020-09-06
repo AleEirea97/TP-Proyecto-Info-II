@@ -10,16 +10,11 @@ int main(){
 
 	while(1){
  		switch (status.estado){
-        	case MOSI:	status = f_MOSI(status, &master);
-											break;
-					case SDI:		status = f_SDI(status, &master,  &slaves);
-            					break;
-       	 	case SDO: 	status = f_SDO(status, &master,  &slaves);
-											break;
-        	case MISO: 	status = f_MISO(status,  &master);
-											break;
+        	case MOSI:	status = f_MOSI(status, &master);		break;
+					case SDI:		status = f_SDI(status, &master,  &slaves);	break;
+       	 	case SDO: 	status = f_SDO(status, &master,  &slaves);	break;
+        	case MISO: 	status = f_MISO(status,  &master);	break;
       	}
 	}
-
-	 return 0;
+	return 0;
 }
