@@ -83,8 +83,7 @@ La máquina será simulada con 2 modos disponibles: **Modo 0** y **Modo 2**. Los
 * **clock_fby**:		Indicación de fin de ciclo de clock **(El byte se ha trasmitido completamente)** para pasar de estados de trasmisión a estados de recepción.  
 
 ### Código: main.c:
-
-<code>
+<```
 #include "bspi.h"
 
 int main(){
@@ -97,12 +96,16 @@ int main(){
 
 	while(1){
  		switch (status.estado){
-        	case MOSI:	status = f_MOSI(status, &master);		break;
-					case SDI:		status = f_SDI(status, &master,  &slaves);	break;
-       	 	case SDO: 	status = f_SDO(status, &master,  &slaves);	break;
-        	case MISO: 	status = f_MISO(status,  &master);	break;
-      	}
+			case MOSI:	status = f_MOSI(status, &master);		
+											break;
+			case SDI:		status = f_SDI(status, &master,  &slaves);
+											break;
+      case SDO: 	status = f_SDO(status, &master,  &slaves);
+											break;
+     case MISO: 	status = f_MISO(status,  &master);
+											break;
+		 }
 	}
 	return 0;
 }
-<code>
+```>
