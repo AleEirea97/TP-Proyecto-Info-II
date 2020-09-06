@@ -60,7 +60,7 @@ Se plantea un diagrama de estados del sistema tratado.
 
   ![Ejemplo de Comunicación](https://github.com/AleEirea97/TP-Proyecto-Info-II/blob/master/img/diagrama_std.png)
 
-La máquna será simulada con 2 modos disponibles: **Modo 0** y **Modo 2**. Los estados son:
+La máquina será simulada con 2 modos disponibles: **Modo 0** y **Modo 2**. Los estados son:
 
 * **init_t:**		Estado inicial de la máquina. Configura al *Master* con el *modo* a utilizar para la trasmisión y la cantidad y habilitación de los *Slaves* utilizados.
 
@@ -81,3 +81,33 @@ La máquna será simulada con 2 modos disponibles: **Modo 0** y **Modo 2**. Los 
 * **SHab_t**:		Indicación desde el *Slave* utilizado al *Master* que va a responder.
 
 * **clock_fby**:		Indicación de fin de ciclo de clock **(El byte se ha trasmitido completamente)** para pasar de estados de trasmisión a estados de recepción.  
+
+### Código: main.c:
+'''
+#include "bspi.h"
+
+int main(){
+
+	bspi_t master[1] = {};		//MASTER
+	bspi_t slaves[3] = {};	//SLAVES.
+ 	resp_st_t status = {};
+
+	init_t(&master,status,  &slaves);	//MASTER configurado.
+
+	while(1){
+ 		switch (status.estado){
+        	case MOSI:	status = f_MOSI(status, &master);
+						break;
+			case SDI:	status = f_SDI(status, &master,  &slaves);
+            			break;
+       	 	case SDO:  	status = f_SDO(status, &master,  &slaves);
+						break;
+        	case MISO: 	status = f_MISO(status,  &master);
+						break;
+      	}
+	}
+
+	 return 0;
+}
+
+'''
