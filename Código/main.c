@@ -3,10 +3,10 @@
 int main(){
 
 	bspi_t master[1] = {};		//MASTER
-	bspi_t slaves[3] = {};	//SLAVES.
+	bspi_t slaves[3] = {};		//SLAVES.
  	resp_st_t status = {};
 
-	init_t(&master,status,  &slaves);	//MASTER configurado.
+	init_t(&master,status,  &slaves);		//MASTER configurado.
 
 	while(1){
  		switch (status.estado){

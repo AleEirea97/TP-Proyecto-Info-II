@@ -104,7 +104,7 @@ Se encarga de leer la configuración del archivo .conf para configurar el Master
 */
 void init_t(bspi_t*, resp_st_t, bspi_t*);
 
-//FUNCIONES ESTADO:
+//FUNCIONES DE ESTADO:
 resp_st_t f_MOSI(resp_st_t, bspi_t*);
 
 resp_st_t f_SDI(resp_st_t, bspi_t*, bspi_t*);

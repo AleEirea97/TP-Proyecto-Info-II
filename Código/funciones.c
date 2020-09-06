@@ -8,7 +8,7 @@ fbit_t gen_byte(fbit_t byte, int c){
 
 	for(i = 0; i < 8; i++){
 
-		a = rand()%c;	//Depende del número que divide se creará un determinado byte.
+		a = rand()%c;	//Depende de c el byte creado.
 
 		if(a > 5){
 			b = 1;
