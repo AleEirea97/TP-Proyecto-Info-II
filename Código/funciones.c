@@ -8,7 +8,7 @@ fbit_t gen_byte(fbit_t byte, int c){
 
 	for(i = 0; i < 8; i++){
 
-		a = rand()%c;	//Depende de c el byte creado.
+		a = rand()%c;	//Depende del número que divide se creará un determinado byte.
 
 		if(a > 5){
 			b = 1;
@@ -176,7 +176,7 @@ void init_t(bspi_t *master, resp_st_t status, bspi_t *slaves){
 	printf("Acceso: %d\n",master[0].SSTE.pmt);
 }
 
-resp_st_t f_MOSI(resp_st_t status, bspi_t *master){
+resp_st_t f_MOSI(resp_st_t status, bspi_t *master, bspi_t *slaves){
 
 	if( status.s_clock > 7 ){
 			status.m_clock = 0;
@@ -248,7 +248,7 @@ resp_st_t f_SDO(resp_st_t status,bspi_t *master, bspi_t *slaves){
 	}
 }
 
-resp_st_t f_MISO(resp_st_t status, bspi_t *master){
+resp_st_t f_MISO(resp_st_t status, bspi_t *master, bspi_t *slaves){
 
 	if( status.s_clock < 8 ){
 

@@ -68,6 +68,9 @@ typedef struct{
 	int a;
 }resp_st_t;
 
+//Puntero a funciones.
+resp_st_t (*BSPI[4])(resp_st_t, bspi_t*, bspi_t*);
+
 /*FIN ESTRUCTURAS Y VARIABLES*/
 
 /*PROTOTIPO DE FUNCIONES*/
@@ -104,14 +107,14 @@ Se encarga de leer la configuración del archivo .conf para configurar el Master
 */
 void init_t(bspi_t*, resp_st_t, bspi_t*);
 
-//FUNCIONES DE ESTADO:
-resp_st_t f_MOSI(resp_st_t, bspi_t*);
+//FUNCIONES ESTADO:
+resp_st_t f_MOSI(resp_st_t, bspi_t*, bspi_t*);
 
 resp_st_t f_SDI(resp_st_t, bspi_t*, bspi_t*);
 
 resp_st_t f_SDO(resp_st_t, bspi_t*, bspi_t*);
 
-resp_st_t f_MISO(resp_st_t, bspi_t*);
+resp_st_t f_MISO(resp_st_t, bspi_t*, bspi_t*);
 
 /*FIN DE PROTOTIPO DE FUNCIONES*/
 
